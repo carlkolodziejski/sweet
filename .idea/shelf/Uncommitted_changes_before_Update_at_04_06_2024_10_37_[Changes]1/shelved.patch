@@ -1,0 +1,125 @@
+Index: sweet/src/main/java/sweet/suites/Suite.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package sweet.suites;\r\n\r\nimport java.util.ArrayList;\r\n/**\r\n * Cette classe abstraite est la classe racine de toutes les classes permettant de représenter une suite.\r\n * Chaque suite est associée à une chaîne de caractères la représentant ({@link #chaineSuite}).\r\n * La classe {@link #Suite} contient la méthode abstraite {@link #getValeursTermes(int)} qui devra être implantée par les sous-classes concrètes\r\n * afin de permettre le calcul des valeurs des termes de la suite.\r\n * \r\n * @author Jean-François Condotta - 25/04/23\r\n */\r\nabstract public class Suite {\r\n\t/**\r\n\t * La chaine de caractères représentant la suite.\r\n\t */\r\n\tprivate String chaineSuite;\r\n\r\n\t/**\r\n\t * Constructeur permettant d'initialiser la suite avec la chaîne de caractères la représentant.\r\n\t * @param chaineSuite La chaîne de caractères représentant la suite.\r\n\t */\r\n\tprotected Suite(String chaineSuite) {\r\n\t\tthis.chaineSuite=chaineSuite;\r\n\t}\r\n\r\n\t/**\r\n\t * Méthode calculant la valeur de chaque terme compris entre le rang 0 et le rang rangMaxTermes (entier donné en paramètre).\r\n\t * Si jamais la valeur d'un terme de rang i ne peut pas être calculée (son calcul conduit par exemple à la valeur infini), le calcul de la valeur de ce terme et de ceux des valeurs des termes suivants ne sont pas\r\n\t * effectués. Dans ce cas, seules les valeurs des termes jusqu'au rang i-1 seront retournées.\r\n\t * \r\n\t * @param rangMaxTermes Le rang maximal des termes pour lesquels les valeurs sont calculées.  \r\n\t * @return Un ArrayList contenant à l'indice i la valeur (un Double non null représentant une valeur forcément finie) du terme de rang i. Cet ArrayList peut être vide.\r\n\t */\r\n\tabstract public ArrayList<Double> getValeursTermes(int rangMaxTermes);\r\n\r\n\t/**\r\n\t * Méthode retournant la valeur du terme de la suite de rang rangTerme.\r\n\t * Par défaut, cette méthode utilise la méthode {@link  #getValeursTermes} pour calculer la valeur\r\n\t * demandée. Dans le cas où la valeur ne peut pas être calculée, null est retournée.\r\n\t * Lorsque cela sera jugé utile, cette implantation pourra être redéfinie dans les différentes sous-classes.\r\n\t * @param rangTerme Le rang du terme pour lequel nous souhaiton la valeur.\r\n\t * @return La valeur du terme de rang rangTerme de la suite (null si il ne peut pas être calculé).\r\n\t */\r\n\tpublic Double getValeurTerme(int rangTerme) {\r\n\t\tArrayList<Double> valeursTermes=getValeursTermes(rangTerme);\r\n\t\tif (valeursTermes.size()==rangTerme+1)\r\n\t\t\treturn valeursTermes.get(rangTerme);\r\n\t\treturn null;\r\n\t}\r\n\t\r\n\t/**\r\n\t * Retourne la chaîne de caractères représentant la suite.\r\n\t */\r\n\tpublic String toString() {\r\n\t\treturn chaineSuite;\r\n\t}\r\n\r\n\t/**\r\n\t * Méthode retournant la valeur maximale appartenant à un tableau.\r\n\t * @param valeurs Un tableau non null de valeurs non null (pouvant être vide).\r\n\t * @return La valeur maximale appartenant au tableau (-Double.MAX_VALUE dans le cas où le tableau est vide).\r\n\t */\r\n\tpublic static double getValeurMax(ArrayList<Double> valeurs) {\r\n\t\tdouble valMax=-Double.MAX_VALUE;\r\n\t\tfor (Double val:valeurs)\r\n\t\t\tif (val>valMax)\r\n\t\t\t\tvalMax=val;\r\n\t\treturn valMax;\r\n\t}\r\n\r\n\t/**\r\n\t * Méthode retournant la valeur minimale appartenant à un tableau.\r\n\t * @param valeurs Un tableau non null de valeurs (pouvant être vide).\r\n\t * @return La valeur minimale appartenant au tableau (Double.MAX_VALUE dans le cas où le tableau est vide).\r\n\t */\r\n\tpublic static double getValeurMin(ArrayList<Double> valeurs) {\r\n\t\tdouble valMin=Double.MAX_VALUE;\r\n\t\tfor (Double val:valeurs)\r\n\t\t\tif (val<valMin)\r\n\t\t\t\tvalMin=val;\r\n\t\treturn valMin;\r\n\t}\r\n\t\r\n\t\r\n\t/**\r\n\t * Méthode retournant un nouveau tableau contenant un seul élément correspondant à la valeur (de type double) passée en paramètre.\r\n\t * @param valeur La valeur qui sera seul élément du tableau retourné.\r\n\t * @return Un nouveau tableau de taille 1 contenant valeur comme seul élément.\r\n\t */\r\n\tstatic public double[] doubleVersTableau(double valeur) {\r\n\t\t\tdouble tab[]=new double[1];\r\n\t\t\ttab[0]=valeur;\r\n\t\t\treturn tab;\r\n\t\t}\r\n\t\r\n\t/**\r\n\t * Méthode permettant de calculer et d'afficher les valeurs des premiers termes de la suite.\r\n\t * Cette méthode affiche également la valeur minimale et la valeur maximale des valeurs des termes calculées.\r\n\t * Elle affiche également la valeur du premier terme et dernier terme parmi les termes affichés.\r\n\t * @param rangMaxTermes Le rang maximal des termes pour lequel le calcul et l'affichage sont effectués.\r\n\t */\r\n\tpublic void calculeEtAffiche(int rangMaxTermes) {\r\n\t\tSystem.out.println(\"===============================================================\");\r\n\t\tSystem.out.println(\"Suite : \"+this+\"(classe \"+this.getClass().getName()+\")\");\r\n\t\tSystem.out.println(\"Valeurs des \"+(rangMaxTermes+1)+\" termes :\");\r\n\t\tArrayList<Double> valeursTermes=getValeursTermes(rangMaxTermes);\r\n\t\tfor (int i=0; i<valeursTermes.size();i++)\r\n\t\t\tSystem.out.print(i+\":\"+valeursTermes.get(i)+\" \");\r\n\t\tSystem.out.println(\"\");\r\n\t\tSystem.out.println(\"Valeur Minimale / Valeur Maximale : \"+getValeurMin(valeursTermes)+\" / \"+getValeurMax(valeursTermes));\r\n\t\tif (valeursTermes.size()>=0) {\r\n\t\t\tDouble valPremier=getValeurTerme(0);\r\n\t\t\tDouble valDernier=getValeurTerme(valeursTermes.size()-1);\r\n\t\t\tSystem.out.println(\"Valeur Premier / Valeur Dernier : \"+valPremier+\" / \"+valDernier);\r\n\t\t\t\r\n\t\t}\r\n\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/sweet/src/main/java/sweet/suites/Suite.java b/sweet/src/main/java/sweet/suites/Suite.java
+--- a/sweet/src/main/java/sweet/suites/Suite.java	
++++ b/sweet/src/main/java/sweet/suites/Suite.java	
+@@ -1,65 +1,34 @@
+ package sweet.suites;
+ 
+ import java.util.ArrayList;
+-/**
+- * Cette classe abstraite est la classe racine de toutes les classes permettant de représenter une suite.
+- * Chaque suite est associée à une chaîne de caractères la représentant ({@link #chaineSuite}).
+- * La classe {@link #Suite} contient la méthode abstraite {@link #getValeursTermes(int)} qui devra être implantée par les sous-classes concrètes
+- * afin de permettre le calcul des valeurs des termes de la suite.
+- * 
+- * @author Jean-François Condotta - 25/04/23
+- */
++
+ abstract public class Suite {
+-	/**
+-	 * La chaine de caractères représentant la suite.
+-	 */
+ 	private String chaineSuite;
+ 
+-	/**
+-	 * Constructeur permettant d'initialiser la suite avec la chaîne de caractères la représentant.
+-	 * @param chaineSuite La chaîne de caractères représentant la suite.
+-	 */
++	public String getChaineSuite() {
++		return chaineSuite;
++	}
++	public void setChaineSuite(String chaineSuite) {
++		this.chaineSuite = chaineSuite;
++	}
++
+ 	protected Suite(String chaineSuite) {
+ 		this.chaineSuite=chaineSuite;
+ 	}
+ 
+-	/**
+-	 * Méthode calculant la valeur de chaque terme compris entre le rang 0 et le rang rangMaxTermes (entier donné en paramètre).
+-	 * Si jamais la valeur d'un terme de rang i ne peut pas être calculée (son calcul conduit par exemple à la valeur infini), le calcul de la valeur de ce terme et de ceux des valeurs des termes suivants ne sont pas
+-	 * effectués. Dans ce cas, seules les valeurs des termes jusqu'au rang i-1 seront retournées.
+-	 * 
+-	 * @param rangMaxTermes Le rang maximal des termes pour lesquels les valeurs sont calculées.  
+-	 * @return Un ArrayList contenant à l'indice i la valeur (un Double non null représentant une valeur forcément finie) du terme de rang i. Cet ArrayList peut être vide.
+-	 */
+ 	abstract public ArrayList<Double> getValeursTermes(int rangMaxTermes);
+ 
+-	/**
+-	 * Méthode retournant la valeur du terme de la suite de rang rangTerme.
+-	 * Par défaut, cette méthode utilise la méthode {@link  #getValeursTermes} pour calculer la valeur
+-	 * demandée. Dans le cas où la valeur ne peut pas être calculée, null est retournée.
+-	 * Lorsque cela sera jugé utile, cette implantation pourra être redéfinie dans les différentes sous-classes.
+-	 * @param rangTerme Le rang du terme pour lequel nous souhaiton la valeur.
+-	 * @return La valeur du terme de rang rangTerme de la suite (null si il ne peut pas être calculé).
+-	 */
+ 	public Double getValeurTerme(int rangTerme) {
+ 		ArrayList<Double> valeursTermes=getValeursTermes(rangTerme);
+ 		if (valeursTermes.size()==rangTerme+1)
+ 			return valeursTermes.get(rangTerme);
+ 		return null;
+ 	}
+-	
+-	/**
+-	 * Retourne la chaîne de caractères représentant la suite.
+-	 */
++
+ 	public String toString() {
+ 		return chaineSuite;
+ 	}
+ 
+-	/**
+-	 * Méthode retournant la valeur maximale appartenant à un tableau.
+-	 * @param valeurs Un tableau non null de valeurs non null (pouvant être vide).
+-	 * @return La valeur maximale appartenant au tableau (-Double.MAX_VALUE dans le cas où le tableau est vide).
+-	 */
+ 	public static double getValeurMax(ArrayList<Double> valeurs) {
+ 		double valMax=-Double.MAX_VALUE;
+ 		for (Double val:valeurs)
+@@ -68,11 +37,6 @@
+ 		return valMax;
+ 	}
+ 
+-	/**
+-	 * Méthode retournant la valeur minimale appartenant à un tableau.
+-	 * @param valeurs Un tableau non null de valeurs (pouvant être vide).
+-	 * @return La valeur minimale appartenant au tableau (Double.MAX_VALUE dans le cas où le tableau est vide).
+-	 */
+ 	public static double getValeurMin(ArrayList<Double> valeurs) {
+ 		double valMin=Double.MAX_VALUE;
+ 		for (Double val:valeurs)
+@@ -80,25 +44,13 @@
+ 				valMin=val;
+ 		return valMin;
+ 	}
+-	
+-	
+-	/**
+-	 * Méthode retournant un nouveau tableau contenant un seul élément correspondant à la valeur (de type double) passée en paramètre.
+-	 * @param valeur La valeur qui sera seul élément du tableau retourné.
+-	 * @return Un nouveau tableau de taille 1 contenant valeur comme seul élément.
+-	 */
++
+ 	static public double[] doubleVersTableau(double valeur) {
+ 			double tab[]=new double[1];
+ 			tab[0]=valeur;
+ 			return tab;
+ 		}
+-	
+-	/**
+-	 * Méthode permettant de calculer et d'afficher les valeurs des premiers termes de la suite.
+-	 * Cette méthode affiche également la valeur minimale et la valeur maximale des valeurs des termes calculées.
+-	 * Elle affiche également la valeur du premier terme et dernier terme parmi les termes affichés.
+-	 * @param rangMaxTermes Le rang maximal des termes pour lequel le calcul et l'affichage sont effectués.
+-	 */
++
+ 	public void calculeEtAffiche(int rangMaxTermes) {
+ 		System.out.println("===============================================================");
+ 		System.out.println("Suite : "+this+"(classe "+this.getClass().getName()+")");
