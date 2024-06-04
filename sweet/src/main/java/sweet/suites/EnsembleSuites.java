@@ -1,5 +1,7 @@
 package sweet.suites;
 
+import java.util.Arrays;
+
 /**
  * Une instance de cette classe permet de gérer un ensemble fini et ordonné de suites.
  * Les suites sont simplement stockées dans un tableau. La suite positionnée à la position 0
@@ -9,10 +11,11 @@ package sweet.suites;
  */
 public class EnsembleSuites {
 
+    public static final String POSITION_INVALIDE = "Position invalide";
     /**
      * Les suites de l'ensemble.
      */
-    private Suite suites[];
+    private final Suite[] suites;
 
     /**
      * Constructeur permettant de créer un ensemble de suites.
@@ -21,8 +24,7 @@ public class EnsembleSuites {
      */
     public EnsembleSuites(int nbSuites) {
         suites = new Suite[nbSuites];
-        for (int i = 0; i < suites.length; i++)
-            suites[i] = null;
+        Arrays.fill(suites, null);
     }
 
     /**
@@ -31,8 +33,7 @@ public class EnsembleSuites {
      * @return Le nombre d'éléments peut contenir l'ensemble de suites.
      */
     public int getCapacite() {
-        //A compléter et/ou à modifier
-        return 0;
+        return suites.length;
     }
 
     /**
@@ -42,7 +43,12 @@ public class EnsembleSuites {
      * @param suite    La suite à mettre à la position donnée (peut être null).
      */
     public void ajouter(int position, Suite suite) {
-        //A compléter et/ou à modifier
+        try {
+            if (position < 0 || position >= suites.length) throw new IndexOutOfBoundsException(POSITION_INVALIDE);
+            suites[position] = suite;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /**
@@ -51,7 +57,12 @@ public class EnsembleSuites {
      * @param position Un entier compris (au sens large) entre 0 et capacite()-1.
      */
     public void supprimer(int position) {
-        //A compléter et/ou à modifier
+        try {
+            if (position < 0 || position >= suites.length) throw new IndexOutOfBoundsException(POSITION_INVALIDE);
+            suites[position] = null;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /**
@@ -61,8 +72,12 @@ public class EnsembleSuites {
      * @return La suite se trouvant à la position donnée (possiblement null).
      */
     public Suite getSuite(int position) {
-        //A compléter et/ou à modifier
-        return null;
+        try {
+            if (position < 0 || position >= suites.length) throw new IndexOutOfBoundsException(POSITION_INVALIDE);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
+        return suites[position];
     }
 
 }
