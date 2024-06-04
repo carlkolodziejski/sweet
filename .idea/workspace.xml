@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Exportation de l'uml en png">
-      <change beforePath="$PROJECT_DIR$/classes/sweet/suites/SuiteRecurrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteRecurrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/Suite.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/Suite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteExplicite.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteExplicite.java" afterDir="false" />
-    </list>
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Exportation de l'uml en png" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "Clem",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/carlk/Documents/sweet/plantuml",
     "node.js.detected.package.eslint": "true",

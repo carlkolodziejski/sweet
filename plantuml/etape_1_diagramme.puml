@@ -1,17 +1,20 @@
 @startuml
 legend Diagramme Étape 1
 
-abstract class Suite {
-    -chaineSuite: String
+package suite {
 
-    #<<constructor>>Suite(chaineSuite: String)
-    +{abstract}getValeursTermes(rangMaxTermes: int): double[*]
-    +getValeurTerme(rangTerme: int): double
-    +toString(): String
-    +{static}getValeurMax(valeurs: double[*]): double
-    +{static}getValeurMin(valeurs: double[*]): double
-    +{static}doubleVersTableau(valeur: double): double[*]
-    +calculeEtAffiche(rangMaxTermes: int): void
+    abstract class Suite {
+        -chaineSuite: String
+
+        #<<constructor>>Suite(chaineSuite: String)
+        +{abstract}getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+        +toString(): String
+        +{static}getValeurMax(valeurs: double[*]): double
+        +{static}getValeurMin(valeurs: double[*]): double
+        +{static}doubleVersTableau(valeur: double): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
 }
-
 @enduml
