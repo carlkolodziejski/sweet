@@ -42,6 +42,8 @@ final public class SuiteGeometrique extends SuiteLineaire {
      */
     @Override
     public Double getValeurTerme(int rangTerme) {
+        if (rangTerme == 0) return getValeurPremierTerme();
+        
         double valeurTerme = getValeurPremierTerme();
         try {
             if (rangTerme < 0)

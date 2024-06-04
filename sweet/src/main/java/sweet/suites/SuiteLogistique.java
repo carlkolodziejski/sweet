@@ -54,10 +54,17 @@ public class SuiteLogistique extends SuiteRecurrente {
         ArrayList<Double> valeurs = new ArrayList<Double>();
         double val = getValPremierTerme(0);
         valeurs.add(val);
+
+        if (rangMaxTermes == 0) return valeurs;
+
         try {
             for (int i = 1; i <= rangMaxTermes; i++) {
+
+                val = valA * val * (1 - val);
                 if (Double.isNaN(val) || Double.isInfinite(val))
                     throw new ExceptionSuite("La valeur au rang " + i + " n'est pas comprise entre 0 et 1 !");
+
+
                 valeurs.add(val);
             }
         } catch (ExceptionSuite e) {

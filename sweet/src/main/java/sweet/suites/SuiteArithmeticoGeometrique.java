@@ -29,12 +29,11 @@ public class SuiteArithmeticoGeometrique extends SuiteRecurrente {
     @Override
     public ArrayList<Double> getValeursTermes(int rangMaxTermes) {
         ArrayList<Double> valeurs = new ArrayList<>();
-        if (rangMaxTermes < 1) {
-            return valeurs;
-        }
 
         double terme = getValeurPremierTerme();
         valeurs.add(terme);
+
+        if (rangMaxTermes == 0) return valeurs;
 
         for (int i = 1; i <= rangMaxTermes; i++) {
             terme = terme * raisonGeometrique + raisonArithmetique;

@@ -60,8 +60,15 @@ public class SuiteLineaire extends SuiteRecurrente {
     public ArrayList<Double> getValeursTermes(int rangMaxTermes) {
         ArrayList<Double> valeurs = new ArrayList<>();
 
+
         for (int i = 0; i < getOrdre(); i++) {
             valeurs.add(getValPremierTerme(i));
+        }
+
+        if (rangMaxTermes <= valeurs.size()) {
+            ArrayList<Double> valeurTerme = new ArrayList<>();
+            valeurTerme.add(getValPremierTerme(rangMaxTermes));
+            return valeurTerme;
         }
 
         try {
