@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"sweet.suites","l":"ExceptionFonction"},{"p":"sweet.suites","l":"Fonction"},{"p":"sweet.suites","l":"Suite"},{"p":"sweet.suites","l":"SuiteExplicite"},{"p":"sweet.suites","l":"SuiteRecurrente"}];updateSearchResults();
