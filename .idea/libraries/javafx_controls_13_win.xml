@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javafx-controls-13-win">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sweet/lib/javafx-controls-13-win.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

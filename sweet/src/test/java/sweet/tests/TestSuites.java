@@ -34,7 +34,7 @@ public class TestSuites {
         }
         suite = new SuiteExplicite("u[n]=10*cos(n)+n", fonction);
         suite.calculeEtAffiche(9);
-        System.out.println("***************************************************************")
+        System.out.println("***************************************************************");
     }
 
     public static void testEtape7() {
