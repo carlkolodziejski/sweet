@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Modifs">
-      <change afterPath="$PROJECT_DIR$/plantuml/etape_5_diagramme.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilan.ods" beforeDir="false" afterPath="$PROJECT_DIR$/bilan.ods" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantuml/etape_5_diagramme.puml" beforeDir="false" afterPath="$PROJECT_DIR$/plantuml/etape_5_diagramme.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="uml" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "uml",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/carlk/Documents/sweet/plantuml",
     "node.js.detected.package.eslint": "true",
