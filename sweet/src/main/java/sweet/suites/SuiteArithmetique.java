@@ -1,11 +1,13 @@
 package sweet.suites;
 
+import java.util.ArrayList;
+
 /**
  * Cette classe correspond aux suites arithmétiques.
  *
  * @author Jean-François Condotta - 25/04/23
  */
-final public class SuiteArithmetique extends SuiteArithmeticoGeometrique {
+public final class SuiteArithmetique extends SuiteArithmeticoGeometrique {
 
     /**
      * Constructeur permettant de créer une nouvelle suite arithmétique.
@@ -24,13 +26,29 @@ final public class SuiteArithmetique extends SuiteArithmeticoGeometrique {
      * @return La raison de la suite arithmétique.
      */
     public double getRaison() {
-        //A compléter et/ou à modifier
-        return 0.0;
+        return getRaisonArithmetique();
     }
 
     @Override
     public void calculeEtAffiche(int rangMaxTermes) {
-        //A compléter et/ou à modifier
+        System.out.println("===============================================================");
+        System.out.println("Suite : " + this + "(classe " + this.getClass().getName() + ")");
+        System.out.println("Valeurs des " + (rangMaxTermes + 1) + " termes :");
+        ArrayList<Double> valeursTermes = getValeursTermes(rangMaxTermes);
+        for (int i = 0; i < valeursTermes.size(); i++)
+            System.out.print(i + ":" + valeursTermes.get(i) + " ");
+        System.out.println("");
+        System.out.println("Valeur Minimale / Valeur Maximale : " + getValeurMin(valeursTermes) + " / " + getValeurMax(valeursTermes));
+        if (valeursTermes.size() >= 0) {
+            Double valPremier = getValeurTerme(0);
+            Double valDernier = getValeurTerme(valeursTermes.size() - 1);
+            System.out.println("Valeur Premier / Valeur Dernier : " + valPremier + " / " + valDernier);
+        }
+        System.out.println("Ordre de la suite : " + getOrdre());
+        System.out.println("Valeur des premiers termes : " + valeursTermes);
+        System.out.println("Valeur de la raison arithmétique : " + getRaisonArithmetique());
+        System.out.println("Valeur de la raison géomètrique : " + getRaisonGeometrique());
+        System.out.println("Valeur de la raison : " + getRaison());
     }
 
     /**
@@ -38,7 +56,22 @@ final public class SuiteArithmetique extends SuiteArithmeticoGeometrique {
      */
     @Override
     public Double getValeurTerme(int rangTerme) {
-        //A compléter et/ou à modifier
-        return null;
+        if (rangTerme == 0)
+            return 0.0;
+        double valeurTerme = 0;
+        try {
+            if (rangTerme < 0)
+                throw new IllegalArgumentException("Le rang est négatif");
+
+            valeurTerme = getValeurPremierTerme();
+
+            for (int i = 0; i < rangTerme; i++) {
+                valeurTerme += getRaisonArithmetique();
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return valeurTerme;
     }
 }
