@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Remplissage de la fonction SuiteExplicite.getValeurTerme">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_controls_13_win.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sweet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sweet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteRecurrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteRecurrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/test/java/sweet/tests/TestSuites.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/test/java/sweet/tests/TestSuites.java" afterDir="false" />
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Ajout de dépendences">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717498329298</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ajout de dépendences">
+      <option name="closed" value="true" />
+      <created>1717499367789</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717499367789</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +262,7 @@
     <MESSAGE value="Modifs" />
     <MESSAGE value="Remplissage de la fonction SuiteRecurrente.getValPremierTerme" />
     <MESSAGE value="Remplissage de la fonction SuiteExplicite.getValeurTerme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remplissage de la fonction SuiteExplicite.getValeurTerme" />
+    <MESSAGE value="Ajout de dépendences" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de dépendences" />
   </component>
 </project>

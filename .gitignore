@@ -71,3 +71,5 @@ $RECYCLE.BIN/
 
 sonarlint
 
+!/sweet/lib/
+!/sweet/lib/exp4j-0.4.8.jar
