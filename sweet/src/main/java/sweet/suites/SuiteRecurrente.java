@@ -44,8 +44,13 @@ abstract public class SuiteRecurrente extends Suite {
      * @return La valeur du terme de rang rangTerme.
      */
     public double getValPremierTerme(int rangTerme) {
-        //A compléter et/ou à modifier
-        return 0.0;
+        try {
+            if (rangTerme >= valPremiersTermes.length || rangTerme < 0)
+                throw new ArrayIndexOutOfBoundsException("Aucun terme trouvé à ce rang.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
+        return valPremiersTermes[rangTerme];
     }
 
     @Override
