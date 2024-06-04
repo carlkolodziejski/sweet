@@ -52,7 +52,7 @@ abstract public class SuiteRecurrente extends Suite {
         }
         return valPremiersTermes[rangTerme];
     }
- 
+
     @Override
     public void calculeEtAffiche(int rangMaxTermes) {
         super.calculeEtAffiche(rangMaxTermes);
