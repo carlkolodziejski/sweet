@@ -1,7 +1,5 @@
 package sweet.suites;
 
-import java.util.ArrayList;
-
 /**
  * Cette classe correspond aux suites géométriques.
  *
@@ -36,7 +34,7 @@ final public class SuiteGeometrique extends SuiteLineaire {
      * @return La valeur du premier terme de la suite géométrique.
      */
     public double getValeurPremierTerme() {
-        return getValeurTerme(0);
+        return getValPremierTerme(0);
     }
 
     /**
@@ -44,17 +42,13 @@ final public class SuiteGeometrique extends SuiteLineaire {
      */
     @Override
     public Double getValeurTerme(int rangTerme) {
-        if (rangTerme == 0)
-            return 0.0;
-        double valeurTerme = 0;
+        double valeurTerme = getValeurPremierTerme();
         try {
             if (rangTerme < 0)
                 throw new IllegalArgumentException("Le rang est négatif");
 
-            valeurTerme = getValeurPremierTerme();
-
-            for (int i = 0; i < rangTerme; i++) {
-                valeurTerme *= getRaison();
+            for (int i = 0; i <= rangTerme; i++) {
+                valeurTerme = valeurTerme * getRaison();
             }
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
@@ -66,21 +60,8 @@ final public class SuiteGeometrique extends SuiteLineaire {
 
     @Override
     public void calculeEtAffiche(int rangMaxTermes) {
-        System.out.println("===============================================================");
-        System.out.println("Suite : " + this + "(classe " + this.getClass().getName() + ")");
-        System.out.println("Valeurs des " + (rangMaxTermes + 1) + " termes :");
-        ArrayList<Double> valeursTermes = getValeursTermes(rangMaxTermes);
-        for (int i = 0; i < valeursTermes.size(); i++)
-            System.out.print(i + ":" + valeursTermes.get(i) + " ");
-        System.out.println("");
-        System.out.println("Valeur Minimale / Valeur Maximale : " + getValeurMin(valeursTermes) + " / " + getValeurMax(valeursTermes));
-        if (valeursTermes.size() >= 0) {
-            Double valPremier = getValeurTerme(0);
-            Double valDernier = getValeurTerme(valeursTermes.size() - 1);
-            System.out.println("Valeur Premier / Valeur Dernier : " + valPremier + " / " + valDernier);
-        }
-        System.out.println("Ordre de la suite : " + getOrdre());
-        System.out.println("Valeur des premiers termes : " + valeursTermes);
+        super.calculeEtAffiche(rangMaxTermes);
+        System.out.println("Valeur des coefficients : " + getValCoef(0));
         System.out.println("Valeur de la raison : " + getRaison());
     }
 }
