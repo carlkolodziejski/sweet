@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Modification des suites">
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Correction min null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmeticoGeometrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmeticoGeometrique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteGeometrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteGeometrique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLineaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLineaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLogistique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLogistique.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717509350124</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Correction min null">
+      <option name="closed" value="true" />
+      <created>1717510754010</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717510754010</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +311,7 @@
     <MESSAGE value="Modification des suites" />
     <MESSAGE value="Correction bug index" />
     <MESSAGE value="Modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif" />
+    <MESSAGE value="Correction min null" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction min null" />
   </component>
 </project>
