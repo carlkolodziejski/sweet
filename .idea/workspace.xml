@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Exportation de l'uml en png" />
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Modifs">
+      <change afterPath="$PROJECT_DIR$/plantuml/etape_2_diagramme.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "uml",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/carlk/Documents/sweet/plantuml",
     "node.js.detected.package.eslint": "true",
@@ -63,6 +66,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\carlk\Documents\sweet\plantuml" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java\sweet\suites" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main" />
@@ -134,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717489928861</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modifs">
+      <option name="closed" value="true" />
+      <created>1717490667627</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717490667627</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,8 +156,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout gitignore" />
-    <MESSAGE value="Modifs" />
     <MESSAGE value="Exportation de l'uml en png" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exportation de l'uml en png" />
+    <MESSAGE value="Modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifs" />
   </component>
 </project>
