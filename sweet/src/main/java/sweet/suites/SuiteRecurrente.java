@@ -1,35 +1,64 @@
 package sweet.suites;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
-public abstract class SuiteRecurrente {
+/**
+ * Cette classe correspond aux suites récurrentes.
+ *
+ * @author Jean-François Condotta - 25/04/23
+ */
 
-  private String chaineSuite;
-  private double[] valeurs;
+abstract public class SuiteRecurrente extends Suite {
+    /**
+     * Les valeurs des premiers termes.
+     */
+    private double valPremiersTermes[];
 
-  public SuiteRecurrente(String chaineSuite, double[] valeurs) {
-    this.chaineSuite = chaineSuite;
-    this.valeurs = valeurs;
-  }
-
-  public abstract ArrayList<Double> getValeursTermes(int rangMaxTermes);
-
-  public void calculeEtAffiche(int rangMaxTermes) {
-    ArrayList<Double> termes = getValeursTermes(rangMaxTermes);
-    for (int i = 0; i < termes.size(); i++) {
-      System.out.println("u[" + i + "] = " + termes.get(i));
+    /**
+     * Constructeur permettant de créer une nouvelle suite récurrente.
+     * Un nouveau tableau est créé en dupliquant le tableau donné en paramètre
+     * afin de stocker les valeurs des premiers termes de la suite.
+     *
+     * @param chaineSuite       La chaîne de caractères représentant la suite.
+     * @param valPremiersTermes Les valeurs des premiers termes de la suite récurrente (supposé non null et contenant au moins un élément).
+     */
+    protected SuiteRecurrente(String chaineSuite, double valPremiersTermes[]) {
+        super(chaineSuite);
+        this.valPremiersTermes = Arrays.copyOf(valPremiersTermes, valPremiersTermes.length);
     }
-  }
 
-  public double[] getValeurs() {
-    return valeurs;
-  }
-
-  public double getValPremierTerme(int position) {
-    if (position >= 0 && position < valeurs.length) {
-      return valeurs[position];
-    } else {
-      throw new IndexOutOfBoundsException("Position du terme premier hors des limites.");
+    /**
+     * Méthode retournant l'ordre de la suite (le nombre des premiers termes pour lesquels les valeurs sont déjà définis).
+     *
+     * @return L'ordre de la suite récurrente (un nombre entier strictement positif).
+     */
+    public int getOrdre() {
+        return valPremiersTermes.length;
     }
-  }
+
+    /**
+     * Méthode retournant la valeur d'un des premiers termes de la suite.
+     *
+     * @param rangTerme Le rang du terme pour lequel nous souhaitons la valeur (un nombre entier entre (au sens large) 0 et getOrdre()-1).
+     * @return La valeur du terme de rang rangTerme.
+     */
+    public double getValPremierTerme(int rangTerme) {
+        try {
+            if (rangTerme >= valPremiersTermes.length || rangTerme < 0)
+                throw new IllegalArgumentException("Le rang est invalide");
+            return valPremiersTermes[rangTerme];
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException(e.getMessage());
+        }
+    }
+
+    @Override
+    public void calculeEtAffiche(int rangMaxTermes) {
+        super.calculeEtAffiche(rangMaxTermes);
+        System.out.println("Ordre de la suite : " + getOrdre());
+        System.out.print("Valeurs des premiers termes : ");
+        for (int i = 0; i < getOrdre(); i++)
+            System.out.print(getValPremierTerme(i) + " ");
+        System.out.println();
+    }
 }
