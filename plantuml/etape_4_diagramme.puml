@@ -1,5 +1,5 @@
 @startuml
-legend Diagramme Étape 2
+legend Diagramme Étape 4
 
 package suite {
     abstract class Suite {
