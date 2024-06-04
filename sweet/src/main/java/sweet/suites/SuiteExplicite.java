@@ -45,11 +45,11 @@ public class SuiteExplicite extends Suite {
     @Override
     public Double getValeurTerme(int rangTerme) {
         try {
-            // TODO Revérifier si la fonction est correcte.
-            return super.getValeurTerme(rangTerme);
+            ArrayList<Double> valeursTermes = getValeursTermes(rangTerme);
+            return valeursTermes.get(rangTerme);
         } catch (Exception e) {
+            return 0.0;
         }
-        return null;
     }
 
 }

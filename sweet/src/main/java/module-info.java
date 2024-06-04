@@ -1,5 +1,5 @@
 module sweet {
     requires javafx.controls;
-    exports sweet;
+    exports sweet.suites;
     requires exp4j;
 }

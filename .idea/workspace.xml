@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Modifs">
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Remplissage de la fonction SuiteRecurrente.getValPremierTerme">
+      <change beforePath="$PROJECT_DIR$/.idea/sweet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sweet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteExplicite.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteExplicite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,6 @@
     "Application.TestSuites.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Class",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -84,6 +86,7 @@
       <recent name="C:\Users\carlk\Documents\sweet\plantuml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carlk\Documents\sweet\sweet\lib" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\test\java\sweet\tests" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java\sweet\suites" />
@@ -212,7 +215,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717493609171</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Modifs">
+      <option name="closed" value="true" />
+      <created>1717493768254</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717493768254</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Remplissage de la fonction SuiteRecurrente.getValPremierTerme">
+      <option name="closed" value="true" />
+      <created>1717498021682</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717498021682</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +245,7 @@
     <MESSAGE value="Mise à jour" />
     <MESSAGE value="Ajout fichier" />
     <MESSAGE value="Modifs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifs" />
+    <MESSAGE value="Remplissage de la fonction SuiteRecurrente.getValPremierTerme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remplissage de la fonction SuiteRecurrente.getValPremierTerme" />
   </component>
 </project>
