@@ -45,9 +45,9 @@ public class SuiteExplicite extends Suite {
     @Override
     public Double getValeurTerme(int rangTerme) {
         try {
+            // TODO Revérifier si la fonction est correcte.
             return super.getValeurTerme(rangTerme);
         } catch (Exception e) {
-            System.out.println("");
         }
         return null;
     }
