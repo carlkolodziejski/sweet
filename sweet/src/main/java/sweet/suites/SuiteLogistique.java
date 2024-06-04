@@ -37,8 +37,7 @@ public class SuiteLogistique extends SuiteRecurrente {
      * @return La valeur de la constante A de la suite logistique
      */
     public double getValA() {
-        //A compléter et/ou à modifier
-        return 0.0;
+        return valA;
     }
 
     /**
@@ -47,8 +46,7 @@ public class SuiteLogistique extends SuiteRecurrente {
      * @return La valeur du premier terme de la suite logisitique.
      */
     public double getValeurPremierTerme() {
-        //A compléter et/ou à modifier
-        return 0.0;
+        return getValPremierTerme(0);
     }
 
     @Override
@@ -58,12 +56,12 @@ public class SuiteLogistique extends SuiteRecurrente {
         valeurs.add(val);
         try {
             for (int i = 1; i <= rangMaxTermes; i++) {
-                //A compléter et/ou à modifier
                 if (Double.isNaN(val) || Double.isInfinite(val))
-                    return valeurs;
+                    throw new ExceptionSuite("La valeur au rang " + i + " n'est pas comprise entre 0 et 1 !");
                 valeurs.add(val);
             }
-        } catch (Exception e) {
+        } catch (ExceptionSuite e) {
+            System.out.println(e.getMessage());
         }
         return valeurs;
     }
