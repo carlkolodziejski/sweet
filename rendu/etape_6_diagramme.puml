@@ -1,0 +1,96 @@
+@startuml
+legend Diagramme Étape 6
+
+package suite {
+    abstract class Suite {
+        -chaineSuite: String
+
+        #<<constructor>>Suite(chaineSuite: String)
+        +{abstract}getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+        +toString(): String
+        +{static}getValeurMax(valeurs: double[*]): double
+        +{static}getValeurMin(valeurs: double[*]): double
+        +{static}doubleVersTableau(valeur: double): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteExplicite extends Suite {
+        +<<constructor>>SuiteExplicite(chaineSuite: String, fonction: Fonction)
+        +getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+    }
+
+    exception ExceptionFonction {
+        -{static}serialVersionUID: long {readOnly}
+
+        +<<constructor>>ExceptionFonction(message: String)
+    }
+
+    class Fonction {
+    }
+
+    abstract class SuiteRecurrente extends Suite {
+        -valPremiersTermes: double
+
+        #<<constructor>>SuiteRecurrente(chaineSuite: String, valPremiersTermes: double[*])
+        +getOrdre(): int
+        +getValPremierTerme(rangTerme: int): double
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteLineaire extends SuiteRecurrente {
+        -coefficients: double[*]
+
+        +<<constructor>>SuiteLineaire(chaineSuite: String, valPremiersTermes: double[*], coefficients: double[*])
+        +getValCoef(positionCoef: int): double
+        +getValeursTermes(rangMaxTermes: int): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+
+    class SuiteGeometrique extends SuiteLineaire {
+        <<constructor>>SuiteGeometrique(chaineSuite: String, valPremierTerme: double, raison: double)
+        +getRaison(): double
+        +getValeurPremierTerme(): double
+        +getValeurTerme(rangTerme: int): double
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteArithmetique extends SuiteArithmeticoGeometrique {
+        +<<constructor>>SuiteArithmetique(chaineSuite: String, valPremierTerme: double, raisonArithmetique: double)
+        +getRaison(): double
+        +calculeEtAffiche(rangMaxTermes: int): void
+        +getValeurTerme(rangTerme: int): double
+    }
+
+    class SuiteArithmeticoGeometrique extends SuiteRecurrente{
+        -raisonGeometrique: double {readOnly}
+        -raisonArithmetique: double {readOnly}
+
+        +<<constructor>>SuiteArithmeticoGeometrique(chaineSuite: String, valPremierTerme: double, raisonGeometrique: double, raisonArithmetique: double)
+        +getRaisonGeometrique(): double
+        +getRaisonArithmetique(): double
+        +getValeurPremierTerme(): double
+        +getValeursTermes(rangMaxTermes: int): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteFibonacci extends SuiteLineaire {
+        +<<constructor>>SuiteFibonacci()
+    }
+
+    class SuiteLogistique extends SuiteRecurrente {
+        -valA: double {readOnly}
+
+        +<<constructor>>SuiteLogistique(chaineSuite: String, valPremierTerme: double, valA: double)
+        +getValA(): double
+        +getValeurPremierTerme(): double
+        +getValeursTermes(rangMaxTermes: int): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+}
+
+SuiteExplicite --> "-fonction 1" Fonction
+EnsembleSuite o-- "-suites *" Suite
+@enduml

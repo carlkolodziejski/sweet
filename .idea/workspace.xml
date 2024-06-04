@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Diagramme final réalisé">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sweetJFC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/Sweet.java" afterDir="false" />
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Importation Sweet">
       <change beforePath="$PROJECT_DIR$/.idea/sweet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sweet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/sweet/App.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/sweet/App.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/sweet/SystemInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/sweet/SystemInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/sweet/class-use/App.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/sweet/class-use/App.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/sweet/class-use/SystemInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/sweet/class-use/SystemInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/sweet/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/sweet/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/sweet/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/sweet/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/SystemInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/SystemInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +68,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Sweet.executor": "Run",
     "Application.TestSuites.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Class",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -79,7 +89,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
+    "settings.editor.selected.configurable": "preferences.pathVariables",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -88,17 +98,26 @@
       <recent name="C:\Users\carlk\Documents\sweet\plantuml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java\sweet\" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\lib" />
+      <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java\sweet\" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\test\java\sweet\tests" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java\sweet\suites" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="sweet" />
       <recent name="" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sweet.Sweet" />
+      <module name="sweet" />
+      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.controls,javafx.graphics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="sweet" />
       <method v="2">
@@ -276,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717511041129</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Importation Sweet">
+      <option name="closed" value="true" />
+      <created>1717511163954</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717511163954</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +323,7 @@
     <MESSAGE value="Déplacement des classes" />
     <MESSAGE value="Modification des suites" />
     <MESSAGE value="Diagramme final réalisé" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diagramme final réalisé" />
+    <MESSAGE value="Importation Sweet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Importation Sweet" />
   </component>
 </project>

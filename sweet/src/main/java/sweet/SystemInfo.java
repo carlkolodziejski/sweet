@@ -1,3 +1,5 @@
+package sweet;
+
 public class SystemInfo {
 
     public static String javaVersion() {

@@ -1,7 +1,8 @@
 module sweet {
     exports sweet.suites;
+    exports sweet;
     requires exp4j;
-    requires jfxrt;
-    requires jdk.incubator.vector;
     requires sweetJFC;
+    requires javafx.graphics;
+    requires javafx.controls;
 }

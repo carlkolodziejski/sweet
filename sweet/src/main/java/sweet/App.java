@@ -1,3 +1,5 @@
+package sweet;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -6,7 +8,7 @@ import javafx.stage.Stage;
 
 
 /**
- * JavaFX App
+ * JavaFX sweet.App
  */
 public class App extends Application {
 
