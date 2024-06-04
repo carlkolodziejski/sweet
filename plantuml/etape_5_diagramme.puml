@@ -1,0 +1,69 @@
+@startuml
+legend Diagramme Étape 5
+
+package suite {
+    abstract class Suite {
+        -chaineSuite: String
+
+        #<<constructor>>Suite(chaineSuite: String)
+        +{abstract}getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+        +toString(): String
+        +{static}getValeurMax(valeurs: double[*]): double
+        +{static}getValeurMin(valeurs: double[*]): double
+        +{static}doubleVersTableau(valeur: double): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteExplicite extends Suite {
+        +<<constructor>>SuiteExplicite(chaineSuite: String, fonction: Fonction)
+        +getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+    }
+
+    exception ExceptionFonction {
+        -{static}serialVersionUID: long {readOnly}
+        +<<constructor>>ExceptionFonction(message: String)
+    }
+
+    class Fonction {
+    }
+
+    abstract class SuiteRecurrente extends Suite {
+        -valPremiersTermes: double
+        #<<constructor>>SuiteRecurrente(chaineSuite: String, valPremiersTermes: double[*])
+        +getOrdre(): int
+        +getValPremierTerme(rangTerme: int): double
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteLineaire extends Suite {
+        -coefficients: double[*]
+        +<<constructor>>SuiteLineaire(chaineSuite: String, valPremiersTermes: double[*], coefficients: double[*])
+    }
+
+    class SuiteGeometrique extends SuiteLineaire {
+        <<constructor>>SuiteGeometrique(chaineSuite: String, valPremierTerme: double, raison: double)
+    }
+
+    class SuiteArithmetique extends SuiteRecurrente {
+        +<<constructor>>SuiteArithmetique(chaineSuite: String, valPremierTerme: double, raisonArithmetique: double)
+    }
+
+    class SuiteArithmeticoGeometrique extends SuiteRecurrente{
+        -raisonGeometrique: double {readOnly}
+        -raisonArithmetique: double {readOnly}
+        +<<constructor>>SuiteArithmeticoGeometrique(chaineSuite: String, valPremierTerme: double, raisonGeometrique: double, raisonArithmetique: double)
+    }
+
+    class SuiteFibonacci extends SuiteLineaire {
+        +<<constructor>>SuiteFibonacci()
+    }
+
+    class SuiteLogistique extends SuiteRecurrente {
+        -valA: double {readOnly}
+        +<<constructor>>SuiteLogistique(chaineSuite: String, valPremierTerme: double, valA: double)
+    }
+}
+SuiteExplicite --> "-fonction 1" Fonction
+@enduml
