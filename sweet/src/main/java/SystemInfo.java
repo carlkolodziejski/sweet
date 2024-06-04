@@ -1,5 +1,3 @@
-package sweet.suites;
-
 public class SystemInfo {
 
     public static String javaVersion() {
