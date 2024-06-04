@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Déplacement des classes">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_20__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmeticoGeometrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmeticoGeometrique.java" afterDir="false" />
-    </list>
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Modification des suites" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717500211572</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Modification des suites">
+      <option name="closed" value="true" />
+      <created>1717503389724</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717503389724</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +266,7 @@
     <MESSAGE value="Remplissage de la fonction SuiteExplicite.getValeurTerme" />
     <MESSAGE value="Ajout de dépendences" />
     <MESSAGE value="Déplacement des classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Déplacement des classes" />
+    <MESSAGE value="Modification des suites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification des suites" />
   </component>
 </project>
