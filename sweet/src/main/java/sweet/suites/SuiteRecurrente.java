@@ -31,7 +31,7 @@ abstract public class SuiteRecurrente extends Suite{
 	 * @return L'ordre de la suite récurrente (un nombre entier strictement positif).
 	 */
 	public int getOrdre() {
-		//A compléter et/ou à modifier
+
 		return 0;
 	}
 

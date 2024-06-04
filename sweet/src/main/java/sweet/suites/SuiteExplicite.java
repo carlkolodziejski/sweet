@@ -43,7 +43,7 @@ public class SuiteExplicite extends Suite {
 	@Override
 	public Double getValeurTerme(int rangTerme) {
 		try {
-			//A compléter et/ou à modifier
+			super.getValeurTerme(rangTerme);
 			return 0.0;
 		}catch(Exception e) {}
 		return null;
