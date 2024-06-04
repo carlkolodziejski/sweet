@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sweetJFC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/sweet/lib/sweetJFC.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
