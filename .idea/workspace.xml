@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/sweet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sweet.iml" afterDir="false" />
+    <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Ajout fichier">
+      <change afterPath="$PROJECT_DIR$/plantuml/etape_4_diagramme.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteExplicite.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteExplicite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/main/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet/src/test/java/sweet/tests/TestSuites.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/test/java/sweet/tests/TestSuites.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="uml" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,11 +58,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.TestSuites.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Class",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "uml",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/carlk/Documents/sweet/plantuml",
     "node.js.detected.package.eslint": "true",
@@ -71,13 +73,21 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\carlk\Documents\sweet\plantuml" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java" />
+      <recent name="C:\Users\carlk\Documents\sweet\sweet\src\test\java\sweet\tests" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main\java\sweet\suites" />
       <recent name="C:\Users\carlk\Documents\sweet\sweet\src\main" />
     </key>
@@ -164,7 +174,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717491373290</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajout d'un TODO">
+      <option name="closed" value="true" />
+      <created>1717491479145</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717491479145</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Mise à jour">
+      <option name="closed" value="true" />
+      <created>1717491496559</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717491496559</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Ajout fichier">
+      <option name="closed" value="true" />
+      <created>1717491572712</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717491572712</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +209,9 @@
     <MESSAGE value="Exportation de l'uml en png" />
     <MESSAGE value="Modifs" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Ajout d'un TODO" />
+    <MESSAGE value="Mise à jour" />
+    <MESSAGE value="Ajout fichier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout fichier" />
   </component>
 </project>

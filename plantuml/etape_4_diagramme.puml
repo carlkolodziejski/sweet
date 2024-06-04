@@ -1,0 +1,42 @@
+@startuml
+legend Diagramme Étape 2
+
+package suite {
+    abstract class Suite {
+        -chaineSuite: String
+
+        #<<constructor>>Suite(chaineSuite: String)
+        +{abstract}getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+        +toString(): String
+        +{static}getValeurMax(valeurs: double[*]): double
+        +{static}getValeurMin(valeurs: double[*]): double
+        +{static}doubleVersTableau(valeur: double): double[*]
+        +calculeEtAffiche(rangMaxTermes: int): void
+    }
+
+    class SuiteExplicite extends Suite {
+        +<<constructor>>SuiteExplicite(chaineSuite: String, fonction: Fonction)
+        +getValeursTermes(rangMaxTermes: int): double[*]
+        +getValeurTerme(rangTerme: int): double
+    }
+
+    exception ExceptionFonction {
+        -{static}serialVersionUID: long {readOnly}
+        +<<constructor>>ExceptionFonction(message: String)
+    }
+
+    class Fonction {
+    }
+
+    abstract class SuiteRecurrente extends Suite {
+        -valPremiersTermes: double
+        #<<constructor>>SuiteRecurrente(chaineSuite: String, valPremiersTermes: double[*])
+        +getOrdre(): int
+        +getValPremierTerme(rangTerme: int): double
+        +calculeEtAffiche(rangMaxTermes: int): void
+
+    }
+}
+SuiteExplicite --> "-fonction 1" Fonction
+@enduml

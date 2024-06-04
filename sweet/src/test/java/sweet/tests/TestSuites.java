@@ -11,29 +11,34 @@ package sweet.tests;
 //import sweet.suites.SuiteLogistique;
 //import sweet.suites.SuiteRecurrente;
 
+import sweet.suites.Fonction;
+import sweet.suites.Suite;
+import sweet.suites.SuiteExplicite;
+
 public class TestSuites {
 
-	public static void testEtape2() {
-		/*
-		System.out.println("***************************************************************");
-		System.out.println("=> Tests sur les suites explicites (Etape 2)                  *");                        
-		Fonction fonction=null;
-		try {
-			fonction=new Fonction("n+(3*n*n)");
-		}catch (Exception e) {};
-		Suite suite=new SuiteExplicite("u[n]=n+(3*n*n)",fonction);
-		suite.calculeEtAffiche(9);
-		try {
-			fonction=new Fonction("10*cos(n)+n");
-		}catch (Exception e) {};
-		suite=new SuiteExplicite("u[n]=10*cos(n)+n",fonction);
-		suite.calculeEtAffiche(9);
-		System.out.println("***************************************************************");
-	*/
-	}
+    public static void testEtape2() {
+        System.out.println("***************************************************************");
+        System.out.println("=> Tests sur les suites explicites (Etape 2)                  *");
+        Fonction fonction = null;
+        try {
+            fonction = new Fonction("n+(3*n*n)");
+        } catch (Exception e) {
+        }
 
-	public static void testEtape7() {
-		//SuiteRecurrente suite=null;
+        Suite suite = new SuiteExplicite("u[n]=n+(3*n*n)", fonction);
+        suite.calculeEtAffiche(9);
+        try {
+            fonction = new Fonction("10*cos(n)+n");
+        } catch (Exception e) {
+        }
+        suite = new SuiteExplicite("u[n]=10*cos(n)+n", fonction);
+        suite.calculeEtAffiche(9);
+        System.out.println("***************************************************************")
+    }
+
+    public static void testEtape7() {
+        //SuiteRecurrente suite=null;
 		/*
 		System.out.println("***************************************************************");
 		System.out.println("=> Tests sur les suites arithmétiques (Etape 7)               *");                        
@@ -92,11 +97,12 @@ public class TestSuites {
 		}
 		System.out.println("***************************************************************");
 		 */
-	}
-	public static void main(String[] args) {
-		System.out.println("Quelques tests sur la création et le calcul de suites ...");
-		testEtape2();
-		testEtape7();
-	}
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Quelques tests sur la création et le calcul de suites ...");
+        testEtape2();
+        testEtape7();
+    }
 
 }
