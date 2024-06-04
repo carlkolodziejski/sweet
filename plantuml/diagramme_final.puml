@@ -89,6 +89,14 @@ package suite {
         +getValeursTermes(rangMaxTermes: int): double[*]
         +calculeEtAffiche(rangMaxTermes: int): void
     }
+
+    class EnsembleSuite {
+        +<<constructor>>EnsembleSuite(nbSuites: int)
+        +getCapacite(): int
+        +ajouter(position: int, suite: Suite): void
+        +supprimer(position: int): void
+        +getSuite(position: int): Suite
+    }
 }
 
 SuiteExplicite --> "-fonction 1" Fonction
