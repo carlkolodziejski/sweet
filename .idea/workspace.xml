@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a53bca12-9f41-4138-b17a-d17ec5107e17" name="Changes" comment="Déplacement des classes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plantuml/etape_6_diagramme.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_10_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_10_37__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_10_37__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_10_37__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_11_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_11_24__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_12__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_12__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_06_2024_13_20__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/EnsembleSuites.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/EnsembleSuites.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/ExceptionSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/ExceptionSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmeticoGeometrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmeticoGeometrique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmetique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteArithmetique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteFibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteFibonacci.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteGeometrique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteGeometrique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLineaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLineaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLogistique.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteLogistique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteRecurrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/sweet/src/main/java/sweet/suites/SuiteRecurrente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "uml",
+    "git-widget-placeholder": "etape-7",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Program Files/Java/jre-1.8/lib/ext/jfxrt.jar",
     "node.js.detected.package.eslint": "true",
@@ -112,21 +96,6 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="sweet" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="sweet" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
