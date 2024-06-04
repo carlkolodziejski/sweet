@@ -18,7 +18,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jre-1.8/lib/ext/jfxrt.jar!/" />
+          <root url="jar://$MODULE_DIR$/sweet/lib/jfxrt.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
